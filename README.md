@@ -1,6 +1,6 @@
 # Architected Intelligence (book site)
 
-Static site for *Architected Intelligence*—promotional and educational overview of the book’s framework. Deployed with [GitHub Pages](https://pages.github.com/) from the repository root (`index.html`).
+Static site for *Architected Intelligence*: a promotional and educational overview of the book’s framework. Deployed with [GitHub Pages](https://pages.github.com/) from the repository root (`index.html`).
 
 ## Run locally
 
@@ -25,9 +25,9 @@ Stop the server with `Ctrl+C`.
 
 ## Project layout
 
-- `index.html` — main page  
-- `css/site.css` — styles  
-- `book_cover.jpg` — cover image  
-- `.nojekyll` — tells GitHub Pages not to run Jekyll  
+- `index.html`: main page  
+- `css/site.css`: styles  
+- `book_cover.jpg`: cover image  
+- `.nojekyll`: tells GitHub Pages not to run Jekyll  
 
 Reference content for authors and agents: `agents.md`, `style_guide.md`, `book_summary.md`.

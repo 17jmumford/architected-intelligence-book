@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Chapter digest: Adapting software engineering observability for AI (Architected Intelligence)." />
-    <title>Chapter 9 — Software engineering observability · Architected Intelligence</title>
+    <title>Chapter 9: Software engineering observability · Architected Intelligence</title>
     <link rel="icon" href="../favicon.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,35 +29,35 @@
     </header>
     <main id="main" class="digest-page">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Chapters</a> · Component 4</nav>
-      <p class="digest-meta">Chapter 9 — Adapting software engineering observability practices for AI systems</p>
+      <p class="digest-meta">Chapter 9: Adapting software engineering observability practices for AI systems</p>
       <h1>Software engineering observability</h1>
 
       <section class="digest-section" aria-labelledby="core-heading">
         <h2 id="core-heading" class="digest-heading">Core ideas</h2>
         <ul class="digest-bullets">
           <li>
-            Like a physician inferring brain health from <strong>external exams</strong>, you rarely get full visibility into model internals—invest instead in rich telemetry
+            Like a physician inferring brain health from <strong>external exams</strong>, you rarely get full visibility into model internals. Invest instead in rich telemetry
             <strong>around</strong> the AI so the system becomes observable and improvable.
           </li>
           <li>
-            Two lenses: <strong>Software engineering observability</strong>—is the system operational and how is it behaving?—vs <strong>data science observability</strong> (Chapter 10)—how well is it
-            performing?
+            Two lenses: <strong>Software engineering observability</strong> asks whether the system is operational and how it is behaving, versus <strong>data science observability</strong> (Chapter 10), which asks how well it is
+            performing.
           </li>
           <li>
             The chapter follows the <strong>AWS Observability Maturity Model</strong> as a staircase: Stage 1 foundational monitoring → Stage 2 core insights → Stage 3 advanced correlation → Stage 4
-            proactive and self-healing behavior. Maturity is never “done”—systems keep changing.
+            proactive and self-healing behavior. Maturity is never “done”; systems keep changing.
           </li>
           <li>
             <strong>Telemetry</strong> (raw operational data) feeds <strong>monitoring</strong> across <strong>logs, traces, and metrics</strong>; for AI, prioritize capturing model inputs/outputs,
             configuration, tokens, cost, tool calls, and linkage metadata so logs are not orphaned noise.
           </li>
-          <li>Stage 2 stresses traffic, saturation, and errors—including <strong>rate-limit</strong> patterns—so failures are loud and debuggable, not silent.</li>
+          <li>Stage 2 stresses traffic, saturation, and errors, including <strong>rate-limit</strong> patterns, so failures are loud and debuggable, not silent.</li>
           <li>
             Stage 3 unifies signals for <strong>multi-step AI reliability</strong>, <strong>AI-native security</strong> (misuse, prompt injection, multi-agent escalation), and
             <strong>accountability / economic control</strong> (who did what, spend tied to product and customer context).
           </li>
           <li>
-            Stage 4 adds <strong>synthetic canaries</strong>, predictive cost/quality signals, <strong>intelligent fallbacks</strong> (including brownout routing), and AIOps-style assistance—always
+            Stage 4 adds <strong>synthetic canaries</strong>, predictive cost/quality signals, <strong>intelligent fallbacks</strong> (including brownout routing), and AIOps-style assistance, always
             paired with human judgment.
           </li>
           <li>Observability is <strong>sociotechnical</strong>: integrate SRE habits with AI teams, shrink “shadow AI,” and build proactive culture (game days, blameless reviews, celebrating silent saves).</li>
