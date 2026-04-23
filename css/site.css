@@ -211,11 +211,45 @@ h2 {
   margin: 0 0 1.75rem;
 }
 
+.hero__book-cta {
+  margin: 0.25rem 0 0;
+}
+
+.hero__book-cta-link {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gold);
+  border-bottom: 1.5px solid rgba(232, 160, 32, 0.45);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero__book-cta-link:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.hero__cover-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 4px;
+  outline-offset: 4px;
+}
+
+.hero__cover-link:focus-visible {
+  outline: 2px solid var(--gold);
+}
+
 .hero__cover {
   border-radius: 4px;
   box-shadow:
     0 2px 0 var(--border),
     0 24px 48px rgba(26, 26, 26, 0.08);
+  vertical-align: middle;
 }
 
 /* Bands */
