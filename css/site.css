@@ -16,6 +16,9 @@
   --space-block: clamp(2rem, 5vw, 3.5rem);
   --max-read: 38rem;
   --max-wide: 72rem;
+  /* Subpage reading column (chapter digests + hub) */
+  --subpage-measure: 42rem;
+  --subpage-measure-wide: 48rem;
 }
 
 *,
@@ -34,6 +37,14 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--body);
+  background: var(--surface);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
   background: var(--surface);
 }
 
@@ -327,26 +338,37 @@ h2 {
   margin-bottom: 0;
 }
 
-/* Metaphor icons: outline “human” lane + solid gold “machine” */
-.brand-icon {
-  width: 72px;
-  height: 72px;
+/* Framework component icons: outline (intent / people / signal) + gold (systems) */
+.component-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: block;
 }
 
-.brand-icon--outline path {
+.component-icon__stroke {
   fill: none;
   stroke: var(--text);
-  stroke-width: 1.5;
+  stroke-width: 1.65;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.brand-icon--gold .machine {
+.component-icon__gold {
   fill: var(--gold);
 }
 
-.brand-icon--gold .machine-light {
+.component-icon__gold-mid {
   fill: var(--gold-light);
+}
+
+.component-icon__gold-soft {
+  fill: var(--gold-pale);
+}
+
+.component-icon__knob {
+  fill: var(--text);
+  stroke: none;
 }
 
 /* Cards */
@@ -399,12 +421,40 @@ h2 {
   margin: 0 auto 1.75rem;
 }
 
+.cta__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+.cta__actions > .btn:not(.btn--ghost) {
+  text-align: center;
+}
+
+.cta__actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.cta__actions-row .btn {
+  flex: 1 1 10rem;
+  min-width: min(100%, 10rem);
+}
+
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.85rem 1.75rem;
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   font-weight: 600;
+  line-height: 1.2;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
@@ -426,7 +476,6 @@ h2 {
 .btn--ghost {
   background: transparent;
   color: var(--gold);
-  margin-left: 0.5rem;
 }
 
 .btn--ghost:hover {
@@ -437,6 +486,7 @@ h2 {
 
 /* Footer */
 .site-footer {
+  flex-shrink: 0;
   padding: 2.5rem clamp(1.25rem, 4vw, 2rem);
   background: var(--white);
   border-top: 0.5px solid var(--border);
@@ -451,9 +501,249 @@ h2 {
   color: var(--muted);
 }
 
+/* Chapter digest + hub: full-bleed white band, centered reading measure (no side “bars”) */
+.digest-page,
+.chapters-hub {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-top: clamp(1.75rem, 4vw, 2.75rem);
+  padding-bottom: clamp(2.75rem, 7vw, 4.5rem);
+  padding-inline: clamp(1.25rem, 6vw, 4rem);
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.digest-page > .breadcrumb,
+.digest-page > .digest-meta,
+.digest-page > h1,
+.digest-page > section,
+.digest-page > p.digest-nav-bottom {
+  max-width: var(--subpage-measure);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.digest-page > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.digest-meta {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.25rem;
+}
+
+.digest-section {
+  margin-top: 2.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.digest-section + .digest-section {
+  border-top: 0.5px solid var(--border);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.digest-heading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.digest-bullets,
+.principle-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.digest-bullets li,
+.principle-list li {
+  margin-bottom: 0.65rem;
+}
+
+.digest-bullets li:last-child,
+.principle-list li:last-child {
+  margin-bottom: 0;
+}
+
+.digest-teaser {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.5rem 1.65rem;
+  background: var(--gold-pale);
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
+}
+
+.digest-teaser h2 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.digest-teaser p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.digest-nav-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid var(--border);
+  font-size: 0.9375rem;
+}
+
+/* In-page links from framework sections to digests */
+.chapter-digest-list {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 0.5px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.chapter-digest-list li {
+  margin-bottom: 0.5rem;
+}
+
+.chapter-digest-list li:last-child {
+  margin-bottom: 0;
+}
+
+.chapter-digest-list a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.chapter-digest-list a:hover {
+  text-decoration: underline;
+}
+
+.chapter-digest-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.65rem;
+}
+
+/* Chapters hub */
+.chapters-hub > h1,
+.chapters-hub > .chapters-hub__lead,
+.chapters-hub > section.chapters-hub__group {
+  max-width: var(--subpage-measure-wide);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chapters-hub h1 {
+  margin-bottom: 0.5rem;
+}
+
+.chapters-hub__lead {
+  margin: 0 0 2.5rem;
+}
+
+.chapters-hub__group {
+  margin-bottom: 2.75rem;
+}
+
+.chapters-hub__group:last-of-type {
+  margin-bottom: 0;
+}
+
+.chapters-hub__group h2 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  border-bottom: 0.5px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.chapters-hub__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.chapters-hub__links li {
+  border-bottom: 0.5px solid var(--border);
+}
+
+.chapters-hub__links li:last-child {
+  border-bottom: none;
+}
+
+.chapters-hub__links a {
+  display: block;
+  padding: 0.85rem 1rem 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--body);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.chapters-hub__links a:hover {
+  background: var(--white);
+  color: var(--text);
+}
+
+.chapters-hub__links span {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+
+.chapters-hub__note {
+  display: block;
+  padding: 0.85rem 1rem 0.9rem;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 @media (max-width: 520px) {
-  .btn--ghost {
-    margin-left: 0;
-    margin-top: 0.75rem;
+  .chapters-hub__links a {
+    padding: 0.75rem 0.85rem;
   }
 }

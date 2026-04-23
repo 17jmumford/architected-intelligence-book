@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chapter digest: Maximizing model performance with input data (Architected Intelligence)." />
+    <title>Chapter 7 — Data to models · Architected Intelligence</title>
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,600;0,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Architected Intelligence</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="digest-page">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Chapters</a> · Component 3</nav>
+      <p class="digest-meta">Chapter 7 — Maximizing model performance with input data</p>
+      <h1>Data to models</h1>
+
+      <section class="digest-section" aria-labelledby="core-heading">
+        <h2 id="core-heading" class="digest-heading">Core ideas</h2>
+        <ul class="digest-bullets">
+          <li>Most “bad model” incidents are <strong>input problems</strong>; models mirror what you feed them.</li>
+          <li>Veterans optimize <strong>consistency</strong> alongside peak quality—wild misses destroy trust even when average metrics look fine.</li>
+          <li>Two levers: <strong>context engineering</strong> (transient, per-call shaping) vs <strong>fine-tuning</strong> (persistent weight change)—neither is a universal graduation step.</li>
+          <li>
+            Context engineering weaves four threads: structured data, retrieved unstructured knowledge, <strong>memory</strong> over time, and <strong>prompt engineering</strong> that
+            synthesizes them.
+          </li>
+          <li>Validate structured inputs before they hit the model; many “hallucinations” are faithful rendering of garbage-in.</li>
+          <li>Prototype richer prompts with <strong>caching</strong> in mind before defaulting to fine-tuning; watch obsolescence and versioning when you do tune.</li>
+          <li>Training framing: unsupervised builds familiarity, supervised builds correctness, preference tuning builds fit—think “train the model like a dog.”</li>
+        </ul>
+      </section>
+
+      <section class="digest-section" aria-labelledby="principles-heading">
+        <h2 id="principles-heading" class="digest-heading">Principles from the chapter</h2>
+        <ul class="principle-list">
+          <li>Models mirror their inputs; if you want better outputs, improve what you feed them.</li>
+          <li>Consistency is a performance metric common among veterans and rare among novices.</li>
+          <li>If humans are assigned to a task they are unfamiliar with and are able to reach the best solution using only context data, research and experience shows that good AI models usually can match or exceed human performance with the same context.</li>
+          <li>Best practice prompt templates create a shared foundation for disciplined variation and adaptation.</li>
+          <li>The memory feedback mechanism per task, user, and user/task combination can steadily drive performance improvement over time as it incorporates knowledge from previous successes and failures.</li>
+          <li>Encourage teams to prototype longer, richer prompts with caching in mind to achieve desired business performance metrics before resorting to fine-tuning.</li>
+          <li>Train the model like a dog: unsupervised builds familiarity, supervised builds correctness, preference tuning builds fit.</li>
+          <li>When fine-tuning, rigorous versioning and clearly defined checkpoints create a safety net to minimize disruptions when the inevitable snags occur.</li>
+        </ul>
+      </section>
+
+      <section class="digest-teaser" aria-labelledby="teaser-heading">
+        <h2 id="teaser-heading">Read the chapter for…</h2>
+        <p>Tay as cautionary tale, the running fitness-app context example, memory architectures, fine-tuning economics including the “fine-tuning trap,” and worked tuning workflows.</p>
+      </section>
+
+      <p class="digest-nav-bottom"><a href="index.html">All chapter digests</a> · <a href="../index.html#model">Framework: Model</a></p>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; Jacob Miller &amp; Jeremy Mumford · Architected Intelligence</p>
+    </footer>
+  </body>
+</html>

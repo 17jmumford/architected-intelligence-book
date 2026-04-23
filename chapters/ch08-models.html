@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chapter digest: Select and optimize models (Architected Intelligence)." />
+    <title>Chapter 8 — Models · Architected Intelligence</title>
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,600;0,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Architected Intelligence</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="digest-page">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Chapters</a> · Component 3</nav>
+      <p class="digest-meta">Chapter 8 — Select and optimize the best models</p>
+      <h1>Select and optimize models</h1>
+
+      <section class="digest-section" aria-labelledby="core-heading">
+        <h2 id="core-heading" class="digest-heading">Core ideas</h2>
+        <ul class="digest-bullets">
+          <li>Model selection is a game of trade-offs, anchored by the <strong>Intelligence–Cost–Latency triangle</strong>: you cannot maximize all three.</li>
+          <li>Define intelligence, latency (average vs tail, TTFT vs completion), and cost (tokens, outliers, people time) for <em>your</em> use case before debating vendors.</li>
+          <li>Plot candidates on a <strong>model performance frontier</strong> (Pareto-efficient set) and choose among non-dominated options with product leadership.</li>
+          <li>Architecture and UX can “cheat” the triangle—routing, cascades, parallel specialists, and escalation to larger models when needed.</li>
+          <li>Provider strategy should be deliberate: ad hoc per-project provider sprawl does not scale.</li>
+          <li>Self-host only when ROI clears the overhead; advanced stacks are <strong>technical debt</strong> you accept for specific gains.</li>
+          <li>Most value still comes from context engineering, modest tuning, caching, and simple routing—review custom stacks quarterly as baselines move.</li>
+        </ul>
+      </section>
+
+      <section class="digest-section" aria-labelledby="principles-heading">
+        <h2 id="principles-heading" class="digest-heading">Principles from the chapter</h2>
+        <ul class="principle-list">
+          <li>The Intelligence-Cost-Latency Triangle: You can buy raw intelligence, you can buy speed, and you can buy at bargain-bin prices… but you can’t buy all three at once.</li>
+          <li>Depending on the use case specifics, your teams can often cheat the Intelligence-Cost-Latency trade-off through architectural patterns and user experience design.</li>
+          <li>Allowing teams to pick AI providers ad hoc for each project will not scale, leaving projects brittle and limited by both performance and maintenance requirements.</li>
+          <li>Self-hosting can become a trap when teams pursue it for engineering prestige rather than technical necessity. Verify the return on investment justifies the overhead.</li>
+          <li>Complexity compounds obligation. Advanced configurations should be treated as technical debt you willingly accept in exchange for critical performance gains.</li>
+        </ul>
+      </section>
+
+      <section class="digest-teaser" aria-labelledby="teaser-heading">
+        <h2 id="teaser-heading">Read the chapter for…</h2>
+        <p>Sample frontier tables, modality and compliance checklists, provider landscape comparisons, compression and routing patterns, and the multi-model travel-planner style example.</p>
+      </section>
+
+      <p class="digest-nav-bottom"><a href="index.html">All chapter digests</a> · <a href="../index.html#model">Framework: Model</a></p>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; Jacob Miller &amp; Jeremy Mumford · Architected Intelligence</p>
+    </footer>
+  </body>
+</html>

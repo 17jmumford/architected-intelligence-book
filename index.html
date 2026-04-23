@@ -8,6 +8,8 @@
       content="Architected Intelligence — a guide to designing AI systems, teams, and AI-first organizations. By Jacob Miller and Jeremy Mumford."
     />
     <title>Architected Intelligence</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,9 +23,10 @@
 
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="site-logo" href="#">Architected Intelligence</a>
+        <a class="site-logo" href="index.html">Architected Intelligence</a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#framework">Framework</a>
+          <a href="chapters/index.html">Chapters</a>
           <a href="#output">Output</a>
           <a href="#input">Input</a>
           <a href="#model">Model</a>
@@ -78,6 +81,10 @@
             <a class="framework-chip" href="#enablement"><span class="framework-chip__num">5</span> Enablement</a>
           </div>
 
+          <p class="lead" style="margin-top: 2rem">
+            <a href="chapters/index.html">Chapter digests</a> — short maps of core ideas and stated principles for each published chapter (lightweight companion to the book).
+          </p>
+
           <div class="card-grid">
             <article class="card card--featured">
               <h3>Unified systems</h3>
@@ -107,10 +114,15 @@
       <section id="output" class="component" aria-labelledby="output-title">
         <div class="component__inner">
           <div class="component__visual">
-            <svg class="brand-icon brand-icon--gold" viewBox="0 0 64 64" aria-hidden="true">
-              <rect class="machine" x="8" y="20" width="48" height="28" rx="3" />
-              <rect class="machine-light" x="14" y="26" width="16" height="6" rx="1" opacity="0.9" />
-              <circle class="machine-light" cx="44" cy="29" r="3" />
+            <svg class="component-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- Intent: goal arrow -->
+              <path class="component-icon__stroke" d="M32 8v10M24 16l8-8l8 8" />
+              <!-- System: delivery surface + rising impact bars -->
+              <rect class="component-icon__gold" x="8" y="24" width="48" height="32" rx="4" />
+              <rect class="component-icon__gold-mid" x="16" y="34" width="6" height="14" rx="1" />
+              <rect class="component-icon__gold-mid" x="26" y="30" width="6" height="18" rx="1" />
+              <rect class="component-icon__gold-mid" x="36" y="38" width="6" height="10" rx="1" />
+              <rect class="component-icon__gold-soft" x="44" y="32" width="6" height="16" rx="1" />
             </svg>
             <p class="section-label">Component 1</p>
           </div>
@@ -137,6 +149,13 @@
                 >—plus architecture tradeoffs such as imperative versus declarative design, tools, human handoffs,
                 goals, and sub-agents.
               </p>
+              <p class="chapter-digest-label">Chapter digests</p>
+              <ul class="chapter-digest-list">
+                <li><a href="chapters/component-1-output.html">Component introduction — Output</a></li>
+                <li><a href="chapters/ch01-design-for-ai.html">Chapter 1 — Design for AI</a></li>
+                <li><a href="chapters/ch02-opportunity-funnel.html">Chapter 2 — The AI Opportunity Funnel</a></li>
+                <li><a href="chapters/ch03-building-agents.html">Chapter 3 — Workflows and agents</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -145,9 +164,17 @@
       <section id="input" class="component" aria-labelledby="input-title">
         <div class="component__inner">
           <div class="component__visual">
-            <svg class="brand-icon brand-icon--outline" viewBox="0 0 64 64" aria-hidden="true">
-              <path d="M32 10v12M22 22h20M20 34c0-6 5.5-10 12-10s12 4 12 10v14H20V34z" />
-              <path d="M26 48v8M38 48v8" />
+            <svg class="component-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- Sources: overlapping drafts (outline) -->
+              <rect class="component-icon__stroke" x="6" y="14" width="22" height="28" rx="2" />
+              <rect class="component-icon__stroke" x="11" y="19" width="22" height="28" rx="2" />
+              <!-- Flow lines into engine -->
+              <path class="component-icon__stroke" d="M36 26h6M36 32h8M36 38h5" />
+              <!-- System: ingestion / knowledge core -->
+              <rect class="component-icon__gold" x="38" y="18" width="20" height="30" rx="3" />
+              <circle class="component-icon__gold-soft" cx="48" cy="30" r="5" />
+              <rect class="component-icon__gold-mid" x="42" y="38" width="12" height="2.5" rx="0.5" />
+              <rect class="component-icon__gold-mid" x="42" y="43" width="12" height="2.5" rx="0.5" />
             </svg>
             <p class="section-label">Component 2</p>
           </div>
@@ -173,6 +200,13 @@
                 A “knowledge pyramid” helps organizations curate information until it is <em>canon</em>: accurate
                 enough to confidently ground AI behavior.
               </p>
+              <p class="chapter-digest-label">Chapter digests</p>
+              <ul class="chapter-digest-list">
+                <li><a href="chapters/component-2-input.html">Component introduction — Input</a></li>
+                <li><a href="chapters/ch04-data-potential.html">Chapter 4 — Untapped data</a></li>
+                <li><a href="chapters/ch05-connect-data.html">Chapter 5 — Connect your data</a></li>
+                <li><a href="chapters/ch06-curate-knowledge.html">Chapter 6 — Curation and feedback</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -181,9 +215,15 @@
       <section id="model" class="component" aria-labelledby="model-title">
         <div class="component__inner">
           <div class="component__visual">
-            <svg class="brand-icon brand-icon--gold" viewBox="0 0 64 64" aria-hidden="true">
-              <polygon class="machine" points="32,8 54,52 10,52" />
-              <circle class="machine-light" cx="32" cy="38" r="8" fill="#fff3dc" opacity="0.95" />
+            <svg class="component-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- Tradeoff frame: intelligence · cost · latency -->
+              <polygon class="component-icon__stroke" points="32,8 54,50 10,50" />
+              <circle class="component-icon__knob" cx="32" cy="12" r="2.5" />
+              <circle class="component-icon__knob" cx="12" cy="50" r="2.5" />
+              <circle class="component-icon__knob" cx="52" cy="50" r="2.5" />
+              <!-- Engine core -->
+              <polygon class="component-icon__gold" points="32,26 44,46 20,46" />
+              <circle class="component-icon__gold-mid" cx="32" cy="38" r="5" />
             </svg>
             <p class="section-label">Component 3</p>
           </div>
@@ -205,6 +245,12 @@
                 compression, routing, and multi-model orchestration help squeeze responsible performance from the
                 stack.
               </p>
+              <p class="chapter-digest-label">Chapter digests</p>
+              <ul class="chapter-digest-list">
+                <li><a href="chapters/component-3-model.html">Component introduction — Model</a></li>
+                <li><a href="chapters/ch07-data-to-models.html">Chapter 7 — Data to models</a></li>
+                <li><a href="chapters/ch08-models.html">Chapter 8 — Select and optimize models</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -213,9 +259,18 @@
       <section id="observability" class="component" aria-labelledby="observability-title">
         <div class="component__inner">
           <div class="component__visual">
-            <svg class="brand-icon brand-icon--outline" viewBox="0 0 64 64" aria-hidden="true">
-              <rect x="10" y="14" width="44" height="36" rx="2" />
-              <path d="M18 26h28M18 34h18M18 42h24" />
+            <svg class="component-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- Dashboard -->
+              <rect class="component-icon__stroke" x="8" y="11" width="48" height="38" rx="3" />
+              <!-- Sparkline -->
+              <path class="component-icon__stroke" d="M12 28c6 6 10-8 18-2s12 10 22 2" />
+              <!-- Histogram -->
+              <rect class="component-icon__stroke" x="14" y="34" width="7" height="12" rx="1" />
+              <rect class="component-icon__stroke" x="24" y="30" width="7" height="16" rx="1" />
+              <rect class="component-icon__stroke" x="34" y="26" width="7" height="20" rx="1" />
+              <rect class="component-icon__stroke" x="44" y="32" width="7" height="14" rx="1" />
+              <!-- Anomaly / focus -->
+              <circle class="component-icon__gold" cx="40" cy="18" r="3.5" />
             </svg>
             <p class="section-label">Component 4</p>
           </div>
@@ -235,6 +290,12 @@
                 For the “why,” the book introduces <strong style="color: var(--text)">TACA</strong> and shows how to
                 build evaluation datasets and apply them across the lifecycle, not only on final answers.
               </p>
+              <p class="chapter-digest-label">Chapter digests</p>
+              <ul class="chapter-digest-list">
+                <li><a href="chapters/component-4-observability.html">Component introduction — Observability</a></li>
+                <li><a href="chapters/ch09-engineering-observability.html">Chapter 9 — Software engineering observability</a></li>
+                <li><a href="chapters/ch10-data-science-observability.html">Chapter 10 — Data science observability</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -243,10 +304,19 @@
       <section id="enablement" class="component" aria-labelledby="enablement-title">
         <div class="component__inner">
           <div class="component__visual">
-            <svg class="brand-icon brand-icon--gold" viewBox="0 0 64 64" aria-hidden="true">
-              <rect class="machine" x="18" y="14" width="28" height="12" rx="2" />
-              <rect class="machine-light" x="14" y="28" width="36" height="10" rx="2" opacity="0.9" />
-              <rect class="machine" x="10" y="42" width="44" height="10" rx="2" />
+            <svg class="component-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <!-- People nodes (outline) -->
+              <circle class="component-icon__stroke" cx="16" cy="20" r="6" />
+              <path class="component-icon__stroke" d="M16 28v8M10 40h12" />
+              <circle class="component-icon__stroke" cx="48" cy="20" r="6" />
+              <path class="component-icon__stroke" d="M48 28v8M42 40h12" />
+              <circle class="component-icon__stroke" cx="32" cy="14" r="5" />
+              <path class="component-icon__stroke" d="M32 21v7M26 32h12" />
+              <!-- Spokes -->
+              <path class="component-icon__stroke" d="M22 36L30 44M42 36L34 44M32 32v12" />
+              <!-- Hub platform (gold) -->
+              <rect class="component-icon__gold" x="22" y="46" width="20" height="12" rx="3" />
+              <rect class="component-icon__gold-mid" x="26" y="50" width="12" height="4" rx="1" />
             </svg>
             <p class="section-label">Component 5</p>
           </div>
@@ -265,8 +335,14 @@
               </p>
               <p>
                 Platform chapters codify traits like modularity, scalability, results-orientation, broad access, and
-                progressive quality—then map coordination, support, and action platforms into a coherent stack.
+                progressive quality—then map coordination, support, and                 action platforms into a coherent stack.
               </p>
+              <p class="chapter-digest-label">Chapter digests</p>
+              <ul class="chapter-digest-list">
+                <li><a href="chapters/component-5-enablement.html">Component introduction — Enablement</a></li>
+                <li><a href="chapters/ch11-people.html">Chapter 11 — People</a></li>
+                <li><a href="chapters/ch12-platforms.html">Chapter 12 — Platforms</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -278,10 +354,13 @@
           Use this site as a lightweight map. The book develops each component with cases, operating principles, and
           implementation detail for leaders and builders.
         </p>
-        <p>
+        <div class="cta__actions">
           <a class="btn" href="#framework">Explore the framework</a>
-          <a class="btn btn--ghost" href="#main">Back to top</a>
-        </p>
+          <div class="cta__actions-row">
+            <a class="btn btn--ghost" href="chapters/index.html">Chapter digests</a>
+            <a class="btn btn--ghost" href="#main">Back to top</a>
+          </div>
+        </div>
       </section>
     </main>
 

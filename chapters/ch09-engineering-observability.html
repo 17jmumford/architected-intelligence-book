@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chapter digest: Adapting software engineering observability for AI (Architected Intelligence)." />
+    <title>Chapter 9 — Software engineering observability · Architected Intelligence</title>
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,600;0,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Architected Intelligence</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="digest-page">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Chapters</a> · Component 4</nav>
+      <p class="digest-meta">Chapter 9 — Adapting software engineering observability practices for AI systems</p>
+      <h1>Software engineering observability</h1>
+
+      <section class="digest-section" aria-labelledby="core-heading">
+        <h2 id="core-heading" class="digest-heading">Core ideas</h2>
+        <ul class="digest-bullets">
+          <li>
+            Like a physician inferring brain health from <strong>external exams</strong>, you rarely get full visibility into model internals—invest instead in rich telemetry
+            <strong>around</strong> the AI so the system becomes observable and improvable.
+          </li>
+          <li>
+            Two lenses: <strong>Software engineering observability</strong>—is the system operational and how is it behaving?—vs <strong>data science observability</strong> (Chapter 10)—how well is it
+            performing?
+          </li>
+          <li>
+            The chapter follows the <strong>AWS Observability Maturity Model</strong> as a staircase: Stage 1 foundational monitoring → Stage 2 core insights → Stage 3 advanced correlation → Stage 4
+            proactive and self-healing behavior. Maturity is never “done”—systems keep changing.
+          </li>
+          <li>
+            <strong>Telemetry</strong> (raw operational data) feeds <strong>monitoring</strong> across <strong>logs, traces, and metrics</strong>; for AI, prioritize capturing model inputs/outputs,
+            configuration, tokens, cost, tool calls, and linkage metadata so logs are not orphaned noise.
+          </li>
+          <li>Stage 2 stresses traffic, saturation, and errors—including <strong>rate-limit</strong> patterns—so failures are loud and debuggable, not silent.</li>
+          <li>
+            Stage 3 unifies signals for <strong>multi-step AI reliability</strong>, <strong>AI-native security</strong> (misuse, prompt injection, multi-agent escalation), and
+            <strong>accountability / economic control</strong> (who did what, spend tied to product and customer context).
+          </li>
+          <li>
+            Stage 4 adds <strong>synthetic canaries</strong>, predictive cost/quality signals, <strong>intelligent fallbacks</strong> (including brownout routing), and AIOps-style assistance—always
+            paired with human judgment.
+          </li>
+          <li>Observability is <strong>sociotechnical</strong>: integrate SRE habits with AI teams, shrink “shadow AI,” and build proactive culture (game days, blameless reviews, celebrating silent saves).</li>
+        </ul>
+      </section>
+
+      <section class="digest-section" aria-labelledby="principles-heading">
+        <h2 id="principles-heading" class="digest-heading">Principles from the chapter</h2>
+        <ul class="principle-list">
+          <li>If users are the primary alerting signal, the AI system is already in trouble.</li>
+          <li>Logs without context are noise.</li>
+          <li>Unwatched rate limits will become tomorrow’s outages.</li>
+          <li>The faster you can close the loop between failure and fix, the faster you can ship features.</li>
+          <li>Many teams will build mediocre AI systems because of the ease of setup, while many fewer will build excellent AI systems because of the challenge of continual improvement.</li>
+          <li>Since computers themselves cannot be held accountable, your observability system must be designed to identify which individuals are responsible for specific actions.</li>
+        </ul>
+      </section>
+
+      <section class="digest-teaser" aria-labelledby="teaser-heading">
+        <h2 id="teaser-heading">Read the chapter for…</h2>
+        <p>
+          OpenTelemetry framing, logging dimensions, trace setup guidance, golden signals and composite alerts (Bob and Jill), security and prompt-injection playbooks, audit stories, Joseph’s cost-velocity case, fallback behavior, and the proactive culture checklist.
+        </p>
+      </section>
+
+      <p class="digest-nav-bottom"><a href="index.html">All chapter digests</a> · <a href="../index.html#observability">Framework: Observability</a></p>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; Jacob Miller &amp; Jeremy Mumford · Architected Intelligence</p>
+    </footer>
+  </body>
+</html>

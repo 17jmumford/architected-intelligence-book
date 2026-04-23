@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chapter digest: Data science observability and TACA (Architected Intelligence)." />
+    <title>Chapter 10 — Data science observability · Architected Intelligence</title>
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,600;0,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Architected Intelligence</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../index.html">Home</a>
+          <a href="index.html">Chapters</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="digest-page">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Chapters</a> · Component 4</nav>
+      <p class="digest-meta">Chapter 10 — Adopting data science observability practices</p>
+      <h1>Data science observability</h1>
+
+      <section class="digest-section" aria-labelledby="core-heading">
+        <h2 id="core-heading" class="digest-heading">Core ideas</h2>
+        <ul class="digest-bullets">
+          <li>After Chapter 9’s “physician” lens (<em>is the system operational?</em>), Chapter 10 moves to the “therapist” lens: <strong>is it working well—and why?</strong>—mind, judgment, and behavior, not only vitals.</li>
+          <li>
+            <strong>Data science observability</strong> is the continuous evaluation of <strong>output quality</strong> and the <strong>interpretability</strong> of decision-making logic—paralleling
+            logs/traces/metrics with evaluation sets, monitors, and behavior dashboards.
+          </li>
+          <li>
+            <strong>TACA</strong> disaggregates “trust”: <strong>Transparency</strong> (evidence of how an answer was reached), <strong>Accuracy</strong> (fit to ground truth or preferences),
+            <strong>Calibration</strong> (confidence matches outcomes), <strong>Alignment</strong> (behavior matches stakeholder values and constraints).
+          </li>
+          <li>Without TACA, “trustworthy” becomes a <strong>suitcase word</strong>; PRDs rarely weight TACA explicitly—doing so is a high-leverage habit.</li>
+          <li>
+            <strong>Quality</strong> (for this chapter) is the weighted blend of TACA dimensions chosen for the product—subjective on purpose; strategy decides tradeoffs (e.g. accuracy vs
+            transparency).
+          </li>
+          <li>Four practical layers tie back to TACA: <strong>context evaluation</strong>, <strong>execution-time monitoring</strong>, <strong>output checks</strong>, and <strong>evaluation sets</strong>.</li>
+          <li><strong>Evaluation sets</strong> anchor TACA measurement; combine with user feedback and expert “vibe checks” for tone, taste, and fit that pure scores miss.</li>
+          <li>Scaling experiments pushes you toward a platform for <strong>storing run settings and results</strong> sooner than teams expect.</li>
+        </ul>
+      </section>
+
+      <section class="digest-section" aria-labelledby="principles-heading">
+        <h2 id="principles-heading" class="digest-heading">Principles from the chapter</h2>
+        <ul class="principle-list">
+          <li>Because AI will nearly always run when an input is provided, silent failure is the most common and often the most dangerous failure mode in AI systems.</li>
+          <li>Without TACA, the word “trustworthy” becomes a suitcase word, packed with conflicting meanings.</li>
+          <li>No single observability method can capture every TACA dimension.</li>
+          <li>One of the most common traps for newer teams responsible for AI quality is overindexing on a subset of context evaluation methods.</li>
+          <li>User feedback, both explicit and implicit, remains the most direct signal of an AI system’s value.</li>
+          <li>Expert and creator “vibe checks” capture qualities of tone, fit, and taste that evaluation sets alone cannot measure.</li>
+          <li>Without evaluation sets, your TACA measures risk losing all meaning.</li>
+          <li>In order to scale AI experimentation, a platform for storing the settings and results of model runs will become necessary sooner rather than later in your team’s AI journey.</li>
+        </ul>
+      </section>
+
+      <section class="digest-teaser" aria-labelledby="teaser-heading">
+        <h2 id="teaser-heading">Read the chapter for…</h2>
+        <p>
+          Full TACA definitions, PM/engineer dialogue examples, impact–quality control framing, deep material on each observability layer, variance analysis on eval runs, and tables tying methods back to TACA.
+        </p>
+      </section>
+
+      <p class="digest-nav-bottom"><a href="index.html">All chapter digests</a> · <a href="../index.html#observability">Framework: Observability</a></p>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; Jacob Miller &amp; Jeremy Mumford · Architected Intelligence</p>
+    </footer>
+  </body>
+</html>
