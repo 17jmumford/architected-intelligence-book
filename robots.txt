@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://architected-intelligence-book.com/sitemap.xml
